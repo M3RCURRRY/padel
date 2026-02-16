@@ -1,0 +1,111 @@
+.navbarWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  height: 52px;
+  padding: 4px 40px;
+
+  @media (max-width: 1300px) {
+    display: none;
+  }
+}
+
+.Header {
+  top: 40px;
+  left: 40px;
+  width: calc(100% - 80px);
+
+  @media (max-width: 750px) {
+    max-height: 44px;
+    width: calc(100% - 48px);
+
+    top: 24px;
+    left: 24px;
+
+    & > a {
+      max-width: 140px;
+    }
+
+    & > *:nth-child(3) {
+      display: none;
+    }
+    & > *:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+.HeaderNav {
+  display: flex;
+  flex-direction: row;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+
+    @media (max-width: 1500px) {
+      gap: 50px;
+    }
+
+    @media (max-width: 1200px) {
+      gap: 50px;
+    }
+
+    height: 100%;
+
+    z-index: 1;
+
+    li {
+      height: 100%;
+
+      &:hover a {
+        cursor: pointer;
+        color: #cbff00;
+      }
+    }
+
+    li a {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 600;
+      font-style: italic;
+      color: #fff;
+
+      transition: color 0.1s linear;
+    }
+  }
+
+  @media (max-width: 750px) {
+    display: none;
+  }
+}
+
+.BookingButton {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+
+  border-radius: 100px;
+  padding: 6px 6px 6px 28px;
+  background-color: #202020;
+
+  @media (max-width: 1300px) {
+    display: none;
+  }
+
+  & > span {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    color: #efefef;
+    font-style: italic;
+  }
+}

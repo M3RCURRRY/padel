@@ -1,0 +1,224 @@
+.MarcosSection {
+  position: relative;
+  width: 100%;
+
+  padding: 0px 80px;
+
+  @media (max-width: 750px) {
+    padding: 0px 10px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 70px 70px 0px 0px;
+    z-index: 1;
+  }
+
+  @media (max-width: 750px) {
+    &::after {
+      top: 1px;
+      height: 70px;
+      border-radius: 32px 32px 0px 0px;
+    }
+  }
+}
+
+.MarcosSign {
+    position: absolute;
+    right: 80px;
+    bottom: 40px;
+
+    @media (max-width: 1700px) {
+        bottom: 16px;
+        right: 30px;
+    }
+
+    @media (max-width: 1550px) {
+        display: none;
+    }
+}
+
+.MarcosContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 72px;
+
+  background-color: #121212;
+
+  padding-left: 72px;
+
+  @media (max-width: 750px) {
+    padding-left: 0;
+    border-radius: 20px;
+    aspect-ratio: 0.835;
+
+    flex-direction: column;
+    justify-content: flex-start;
+
+    overflow: hidden;
+  }
+}
+
+.MarcosImage {
+  margin-top: -5%;
+  flex: 1;
+  z-index: 2;
+
+  & > img {
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  @media (max-width: 750px) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+    transform: translateX(15%);
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    & img {
+      max-width: 60%;
+      width: 60%;
+    }
+  }
+}
+
+.MarcosContent {
+  flex: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (max-width: 750px) {
+    padding: 18px;
+    gap: 23px;
+  }
+
+  .MarcosLabels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+
+    .Argentina {
+      border-radius: 20px;
+
+      @media (max-width: 750px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 750px) {
+      justify-content: center;
+    }
+
+    .Label {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 600;
+      color: #fff;
+      font-style: italic;
+      padding: 9px 40px;
+      background-color: #f0f0f033;
+
+      @media (max-width: 750px) {
+        font-size: 12px;
+        line-height: 12px;
+        padding: 7px 13px;
+      }
+    }
+  }
+
+  .MarcosTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    & > p {
+      font-size: 108px;
+      line-height: 108px;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-style: italic;
+
+      @media (max-width: 750px) {
+        font-size: 48px;
+        line-height: 48px;
+      }
+    }
+
+    .Title1 {
+      color: #cbff00;
+    }
+
+    .Title2 {
+      position: relative;
+      color: #fff;
+      margin-left: 44px;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: "";
+        width: 69px;
+        height: 58px;
+        transform: translate(100%, -60%);
+        background-image: url("/icons/crown.png");
+        background-size: 69px 58px;
+        z-index: 1;
+      }
+
+      @media (max-width: 750px) {
+        margin-left: 22px;
+
+        &::after {
+          width: 35px;
+          height: 29px;
+          background-size: 35px 29px;
+        }
+      }
+    }
+  }
+
+  .MarcosDesc {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    font-style: italic;
+    color: #c7c7c7;
+
+    @media (max-width: 750px) {
+      font-size: 12px;
+      max-width: 55%;
+    }
+  }
+}
+
+.HexWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 72px;
+
+  overflow: hidden;
+}

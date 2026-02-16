@@ -1,0 +1,163 @@
+.HeroSection {
+  position: relative;
+  padding: 20px;
+}
+@media (max-width: 750px) {
+  .HeroSection {
+    padding: 10px;
+  }
+}
+
+.HeroImageWrapper {
+  position: relative;
+  padding: 20px;
+  aspect-ratio: 2.238;
+  width: 100%;
+  border-radius: 46px;
+  overflow: hidden;
+}
+@media (max-width: 750px) {
+  .HeroImageWrapper {
+    aspect-ratio: 0.5466;
+    width: 100%;
+    border-radius: 30px;
+  }
+}
+
+.HeroContent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+
+  & > h1 {
+    font-size: 58px;
+    font-weight: 900;
+    line-height: 58px;
+    text-align: center;
+    font-style: italic;
+    width: max-content;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+    & > .Colored {
+      color: #cbff00;
+    }
+  }
+  @media (max-width: 750px) {
+    & > h1 {
+      width: fit-content;
+      font-size: 28px;
+      line-height: 28px;
+      gap: 0px;
+      line-break: normal;
+    }
+  }
+
+  & > h2 {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #dddddd;
+    text-align: center;
+    font-style: italic;
+
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 750px) {
+    & > h2 {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+  .HeroLabels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 22px;
+
+    .HeroLabel {
+      height: fit-content;
+      padding: 9px 30px;
+      background-color: #f0f0f033;
+      font-style: italic;
+      min-width: 148px;
+      h4 {
+        font-size: 18px;
+      }
+    }
+    @media (max-width: 750px) {
+      .HeroLabel {
+        padding: 7px 20px;
+        width: max-content;
+        min-width: unset;
+
+        h4 {
+          font-size: 12px;
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+  .HeroLink {
+    position: relative;
+    background-color: #cbff00;
+    padding: 15px 100px 15px 28px;
+    border-radius: 50px;
+    height: 52px;
+
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    font-style: italic;
+    color: #000;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0 auto;
+
+    &::after {
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      right: 6px;
+      top: 6px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      content: url("/icons/arrow-right-top.png");
+    }
+  }
+  @media (max-width: 750px) {
+    .HeroLink {
+      font-size: 14px;
+      line-height: 14px;
+      height: 38px;
+      &::after {
+        height: 30px;
+        width: 30px;
+        top: 4px;
+        right: 4px;
+        content: url("/icons/arrow-right-top-small.png");
+      }
+    }
+  }
+}

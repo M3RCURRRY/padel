@@ -1,0 +1,93 @@
+.Tabs {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 750px) {
+    width: 100%;
+  }
+
+  .TabsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-bottom: 32px;
+
+    @media (max-width: 750px) {
+      margin-bottom: 18px;
+    }
+
+    .Tab {
+      background-color: transparent;
+      color: #9a9a9a;
+      border-radius: 50px;
+      padding: 14px;
+      flex: 1;
+      height: fit-content;
+
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 600;
+      font-style: italic;
+      text-align: center;
+      white-space: nowrap;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.Active {
+        background-color: #cbff00;
+        color: #2a2a2a;
+      }
+
+      @media (max-width: 750px) {
+        width: fit-content;
+        padding: 7px 13px;
+        flex: unset;
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+
+  .TabDataContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: 750px) {
+      gap: 14px;
+    }
+
+    .Title {
+      font-size: 48px;
+      line-height: 48px;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-style: italic;
+      color: #2a2a2a;
+
+      @media (max-width: 750px) {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+
+    .Desc {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 600;
+      font-style: italic;
+      color: #a3a3a3;
+
+      @media (max-width: 750px) {
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+}

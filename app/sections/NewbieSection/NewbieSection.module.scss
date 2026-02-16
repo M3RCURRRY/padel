@@ -1,0 +1,60 @@
+.NewbieSection {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 100px;
+  padding: 0px 80px;
+
+  @media (max-width: 750px) {
+    padding: 0px 10px;
+  }
+
+  .NewbieTitle {
+    width: 100%;
+    text-align: center;
+
+    font-size: 58px;
+    line-height: 58px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #2a2a2a;
+
+    @media (max-width: 750px) {
+      font-size: 28px;
+      line-height: 28px;
+
+      margin-bottom: 23px;
+    }
+  }
+
+  .NewbieContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    @media (max-width: 750px) {
+      flex-direction: column;
+    }
+  }
+
+  .NewbieTabs {
+    position: relative;
+    flex-basis: 50%;
+    margin-top: 50px;
+  }
+
+  .NewbieImages {
+    flex-basis: 50%;
+
+    @media (max-width: 750px) {
+      margin-top: 16px;
+    }
+  }
+}

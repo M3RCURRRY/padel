@@ -1,0 +1,42 @@
+.CarouselSection {
+  position: relative;
+  width: 100%;
+
+  margin-top: 130px;
+
+  @media (max-width: 750px) {
+    margin-top: 40px;
+  }
+
+  .CarouselTopbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .CarouselContainer {
+    width: 100%;
+  }
+
+  h4 {
+    margin-left: 80px;
+    font-size: 58px;
+    line-height: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #2A2A2A;
+
+    margin-bottom: 30px;
+
+    @media (max-width: 750px) {
+        margin-bottom: 16px;
+        font-size: 28px;
+        line-height: 28px;
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+  }
+}

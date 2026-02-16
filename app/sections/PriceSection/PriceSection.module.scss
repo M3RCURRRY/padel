@@ -1,0 +1,209 @@
+.PriceSection {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  padding: 30px 80px 0px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%) translateZ(0);
+    width: 100%;
+    height: 130px;
+    background-color: #fff;
+    border-radius: 0px 0px 70px 70px;
+    z-index: 1;
+  }
+
+  @media (max-width: 750px) {
+    padding: 30px 10px 0px;
+
+    &::after {
+        bottom: 1px;
+        height: 70px;
+        border-radius: 0px 0px 32px 32px;
+    }
+  }
+}
+
+.PriceLine {
+  display: flex;
+  padding: 29px 48px;
+  border-radius: 26px;
+
+  background-color: #232323;
+
+  display: flex;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    width: 100%;
+
+    padding: 18px;
+  }
+
+  .PriceTitle {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 12px;
+
+    flex-basis: 35%;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      content: "";
+      background-color: #5d5d5d;
+    }
+
+    @media (max-width: 750px) {
+      flex-basis: 100%;
+
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+
+      &::after {
+        top: 100%;
+        right: 50%;
+        transform: translateX(50%);
+        height: 1px;
+        width: 100%;
+      }
+    }
+
+    .Primary {
+      font-size: 48px;
+      line-height: 48px;
+      font-weight: 900;
+      color: #cbff00;
+      font-style: italic;
+      text-transform: uppercase;
+
+      @media (max-width: 750px) {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+
+    .Secondary {
+      font-size: 26px;
+      line-height: 36px;
+      font-weight: 900;
+      color: #ffffff;
+      font-style: italic;
+
+      @media (max-width: 750px) {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .PricePositions {
+    margin-left: 8%;
+    margin-right: 8%;
+    flex: 1;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    @media (max-width: 750px) {
+      margin-left: 0;
+      margin-right: 0;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .PriceTime {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 4px;
+
+      .Time {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 600;
+        font-style: italic;
+        color: #a4a4a4;
+      }
+
+      .Price {
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: 800;
+        font-style: italic;
+        color: #fff;
+      }
+
+      @media (max-width: 750px) {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .Time {
+          font-size: 12px;
+          line-height: 12px;
+        }
+
+        .Price {
+          font-size: 24px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .PriceInfo {
+      flex: 1;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 600;
+      color: #dddddd;
+      font-style: italic;
+      margin-left: 0%;
+      margin-right: 0%;
+
+      @media (max-width: 750px) {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+
+    .PriceFree {
+      font-size: 48px;
+      line-height: 48px;
+      font-weight: 900;
+      color: #cbff00;
+      text-transform: uppercase;
+      font-style: italic;
+
+      & > span {
+        color: #fff;
+      }
+
+      @media (max-width: 750px) {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+}

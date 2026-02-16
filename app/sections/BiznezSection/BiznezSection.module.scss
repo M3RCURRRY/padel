@@ -1,0 +1,117 @@
+.BiznezSection {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 250px;
+  padding-bottom: 140px;
+
+  overflow-x: hidden;
+
+  background-color: #121212;
+
+  @media (max-width: 750px) {
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
+
+  h2 {
+    font-size: 58px;
+    line-height: 58px;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+
+    z-index: 1;
+
+    margin-bottom: 22px;
+
+    @media (max-width: 750px) {
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 14px;
+    }
+
+    & > span {
+      color: #cbff00;
+    }
+  }
+
+  .BiznezDesc {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    max-width: 80%;
+    color: #dddddd;
+
+    z-index: 1;
+
+    @media (max-width: 750px) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+
+.Vinnete {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center center;
+  object-fit: cover;
+  opacity: 0.1;
+}
+
+.Balls {
+  position: absolute;
+  left: 0;
+  top: 50% !important;
+  transform: translateY(-50%);
+  width: 100%;
+  height: auto !important;
+  object-position: center center;
+  object-fit: cover;
+}
+
+.BiznezLink {
+  position: relative;
+  background-color: #cbff00;
+  padding: 15px 100px 15px 28px;
+  border-radius: 50px;
+  height: 52px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  font-style: italic;
+  color: #000;
+
+  display: flex;
+  align-items: center;
+
+  margin: 0 auto;
+
+  &::after {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 6px;
+    top: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    content: url("/icons/arrow-right-top.png");
+  }
+}

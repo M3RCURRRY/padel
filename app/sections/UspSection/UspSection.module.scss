@@ -1,0 +1,201 @@
+.UspSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 64px 80px 0px;
+
+  @media (max-width: 750px) {
+    margin: 32px 10px 0px;
+  }
+
+  & > h2 {
+    font-size: 58px;
+    line-height: 58px;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #2a2a2a;
+
+    margin-bottom: 40px;
+
+    @media (max-width: 750px) {
+      font-size: 28px;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .UspContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    width: 100%;
+
+    @media (max-width: 750px) {
+      flex-direction: column;
+    }
+  }
+
+  .UspCard {
+    position: relative;
+    flex: 1;
+    aspect-ratio: 1;
+    border-radius: 24px;
+    overflow: hidden;
+
+    padding: 14px 14px 28px;
+
+    &::after {
+      height: 60%;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      background: linear-gradient(to top, #111111cc 0%, #11111100 100%);
+
+      content: "";
+    }
+
+    @media (max-width: 750px) {
+      width: 100%;
+      padding: 8px 8px 16px;
+    }
+  }
+
+  .UspImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .UspCardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+
+    & .TopContent {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      flex-wrap: nowrap;
+
+      .TopLabel {
+        padding: 10px 30px;
+        background-color: #eaeaea33;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+        font-style: italic;
+
+        @media (max-width: 750px) {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+    }
+
+    & .BottomContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      z-index: 1;
+
+      & > h2 {
+        max-width: 75%;
+        margin-bottom: 20px;
+
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+
+        & > span {
+          color: #cbff00;
+        }
+
+        @media (max-width: 750px) {
+          font-size: 24px;
+          line-height: 24px;
+          margin-bottom: 14px;
+        }
+      }
+
+      & > p {
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+        color: #dddddd;
+        text-align: center;
+        max-width: 75%;
+        font-style: italic;
+
+        margin-bottom: 32px;
+
+        @media (max-width: 750px) {
+          font-size: 12px;
+          line-height: 12px;
+          max-width: 100%;
+
+          margin-bottom: 14px;
+        }
+      }
+
+      .ContentLink {
+        position: relative;
+        background-color: #cbff00;
+        padding: 15px 100px 15px 28px;
+        border-radius: 50px;
+        height: 52px;
+
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 500;
+        font-style: italic;
+        color: #000;
+
+        display: flex;
+        align-items: center;
+
+        margin: 0 auto;
+
+        &::after {
+          position: absolute;
+          height: 40px;
+          width: 40px;
+          right: 6px;
+          top: 6px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+          content: url("/icons/arrow-right-top.png");
+        }
+
+        @media (max-width: 750px) {
+          font-size: 14px;
+          line-height: 14px;
+          height: 38px;
+          &::after {
+            height: 30px;
+            width: 30px;
+            right: 4px;
+            top: 4px;
+            content: url("/icons/arrow-right-top-small.png");
+          }
+        }
+      }
+    }
+  }
+}
