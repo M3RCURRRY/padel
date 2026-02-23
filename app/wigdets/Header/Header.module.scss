@@ -17,6 +17,12 @@
   left: 40px;
   width: calc(100% - 80px);
 
+  display: flex;               /* flex */
+  flex-direction: row;         /* flex-row */
+  justify-content: space-between; /* justify-between */
+  z-index: 1000;               /* z-1000 */
+  position: fixed;
+
   @media (max-width: 750px) {
     max-height: 44px;
     width: calc(100% - 48px);

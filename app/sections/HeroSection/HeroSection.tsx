@@ -19,7 +19,7 @@ export default function HeroSection() {
             objectPosition: `center`,
           }}
           alt="Hero Section"
-          src="/images/cover_new.png"
+          src="/images/hero-bg.png"
         />
       </div>
       <div className={cl.HeroContent}>
@@ -44,7 +44,7 @@ export default function HeroSection() {
           современного падела
         </h2>
         <Link
-          href="https://app.lundapadel.ru/auth"
+          href="https://t.me/padelproclubadmin"
           target="_blank"
           className={cl.HeroLink}
         >

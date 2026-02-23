@@ -1,34 +1,56 @@
-# Use an official Node.js runtime as a base image
-FROM node:20.20.0-alpine
+# --- СТАДИЯ СБОРКИ (BUILD STAGE) ---
+FROM node:20.20.0-alpine as builder
 
-# Set working directory
+# Устанавливаем рабочую директорию для сборки
 WORKDIR /usr/app
 
-# Install PM2 globally
-RUN npm install --global pm2
-
-# Copy "package.json" and "package-lock.json" before other files
-# Utilise Docker cache to save re-installing dependencies if unchanged
+# Копируем package.json и package-lock.json (или yarn.lock)
+# Это позволяет Docker кэшировать установку зависимостей
 COPY ./package*.json ./
 
-# Install dependencies
+# Устанавливаем все зависимости, включая devDependencies, необходимые для сборки
 RUN npm install
 
-# Change ownership to the non-root user
-RUN chown -R node:node /usr/app
+# Копируем весь исходный код приложения
+COPY . .
 
-# Copy all files
-COPY ./ ./
+# Билдим Next.js приложение для продакшена
+# Эта команда создаст оптимизированную продакшн-сборку в папке .next
+RUN npm run build
 
-# Build app
-#RUN npm run build
+# --- СТАДИЯ ЗАПУСКА (RUNNER STAGE) ---
+# Используем чистый, легкий образ Node.js для продакшен-среды
+FROM node:20.20.0-alpine
 
-# Expose the listening port
+# Устанавливаем рабочую директорию для запуска
+WORKDIR /usr/app
+
+# Устанавливаем PM2 глобально в этом чистом образе
+RUN npm install --global pm2
+
+# Копируем только необходимые артефакты из стадии сборки
+# - Собранное Next.js приложение
+# - node_modules (только production-зависимости, так как devDependencies не нужны)
+# - package.json (необходим для выполнения 'npm run start')
+# - public (статические файлы)
+COPY --from=builder /usr/app/.next ./.next
+COPY --from=builder /usr/app/node_modules ./node_modules
+COPY --from=builder /usr/app/package.json ./package.json
+COPY --from=builder /usr/app/public ./public
+
+# Устанавливаем переменную окружения для продакшн-режима Next.js
+ENV NODE_ENV=production
+
+# Порт, на котором будет слушать приложение Next.js
 EXPOSE 3000
 
-# Run container as non-root (unprivileged) user
-# The "node" user is provided in the Node.js Alpine base image
+# Изменяем владельца файлов на не-привилегированного пользователя 'node'
+# Это хорошая практика безопасности
+RUN chown -R node:node /usr/app
+
+# Переключаемся на не-привилегированного пользователя для запуска приложения
 USER node
 
-# Launch app with PM2
-CMD [ "pm2-runtime", "start", "npm", "--", "run", "dev" ]
+# Запускаем приложение Next.js в продакшн-режиме с помощью PM2
+# 'npm run start' - это стандартный способ запуска Next.js в продакшене
+CMD [ "pm2-runtime", "start", "npm", "--", "run", "start" ]

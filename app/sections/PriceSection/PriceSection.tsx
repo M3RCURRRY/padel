@@ -18,11 +18,11 @@ export default function PriceSection() {
             <p className={cl.Price}>4000 ₽</p>
           </div>
           <div className={cl.PriceTime}>
-            <p className={cl.Time}>15:00-24:00</p>
+            <p className={cl.Time}>15:00-00:00</p>
             <p className={cl.Price}>5000 ₽</p>
           </div>
           <div className={cl.PriceTime}>
-            <p className={cl.Time}>{"Выходные (07:00-24:00)"}</p>
+            <p className={cl.Time}>{"Выходные (07:00-00:00)"}</p>
             <p className={cl.Price}>5000 ₽</p>
           </div>
         </div>
@@ -31,18 +31,21 @@ export default function PriceSection() {
         <div className={cl.PriceTitle}>
           <h3 className={cl.Primary}>Занятие с тренером</h3>
         </div>
-        <div className={cl.PricePositions}>
+        <div className={cl.PricePositions} style={{ marginRight: 0}}>
           <div className={cl.PriceTime}>
             <p className={cl.Time}>{"1 час"}</p>
             <p className={cl.Price}>2500 ₽</p>
           </div>
           <div className={cl.PriceTime}>
+            <p className={cl.Time}>{"Первая пробная тренировка в мини группе"}</p>
+            <p className={cl.Price}>1750 ₽</p>
+          </div>
+          <div className={cl.PriceTime}>
             <p className={cl.Time}>{"Первая пробная тренировка"}</p>
             <p className={cl.Price}>1750 ₽</p>
           </div>
-          <div className={cl.PriceInfo}>
-            Тренировка под руководством опытного тренера - <br />
-            выпускника Marcos Paillole academy
+          <div className={cl.PriceInfo} style={{ whiteSpace: "pre-line", minWidth: "20%" }}>
+            Тренировка под руководством опытного тренера
           </div>
         </div>
       </div>

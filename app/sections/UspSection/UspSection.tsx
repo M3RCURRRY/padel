@@ -36,7 +36,7 @@ export default function UspSection() {
                 тебя акулой падела
               </p>
               <Link
-                href={"https://app.lundapadel.ru/auth"}
+                href={"https://t.me/padelproclubadmin"}
                 target="_blank"
                 className={cl.ContentLink}
               >
@@ -78,7 +78,7 @@ export default function UspSection() {
                 Готов попробовать?
               </p>
               <Link
-                href={"https://app.lundapadel.ru/auth"}
+                href={"https://t.me/padelproclubadmin"}
                 target="_blank"
                 className={cl.ContentLink}
               >
@@ -116,7 +116,7 @@ export default function UspSection() {
                 Подойдет для любого уровня игры
               </p>
               <Link
-                href={"https://app.lundapadel.ru/auth"}
+                href={"https://t.me/padelproclubadmin"}
                 target="_blank"
                 className={cl.ContentLink}
               >

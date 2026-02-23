@@ -18,6 +18,7 @@ export default function NewbieSection() {
             width={955}
             loading="lazy"
             decoding="async"
+            style={{ height: "auto !important" }}
           />
         </div>
       </div>

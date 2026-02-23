@@ -13,14 +13,14 @@ import BiznezSection from "./sections/BiznezSection/BiznezSection";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen justify-center bg-white font-sans">
-      <main className="w-full">
+    <div className="pageWrapper">
+      <main className="mainClass">
         <Header />
         <HeroSection />
         <UspSection />
         <PriceSection />
-        <CourtSection />
-        <MarcosSection />
+        {/* <CourtSection /> */}
+        {/* <MarcosSection /> */}
         <NewbieSection />
         <CarouselSection />
         <AddressSection />

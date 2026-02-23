@@ -70,6 +70,7 @@ export default function AddressSection() {
                 height={350}
                 loading="lazy"
                 decoding="async"
+                style={{ height: "auto !important" }}
               />
               <Link
                 href={"https://t.me/padelvladivostok"}
@@ -87,6 +88,7 @@ export default function AddressSection() {
                 height={350}
                 loading="lazy"
                 decoding="async"
+                style={{ height: "auto !important" }}
               />
               <Link
                 href={

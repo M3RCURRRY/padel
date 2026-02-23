@@ -110,7 +110,7 @@ function BurgerDrawer({ closeHandler }: Readonly<IDrawerProps>) {
         />
       </div>
       <Link
-        href={"https://app.lundapadel.ru/auth"}
+        href={"https://t.me/padelproclubadmin"}
         target="_blank"
         className={cl.OrderButton}
       >
