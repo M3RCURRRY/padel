@@ -101,6 +101,10 @@
     font-weight: 700;
     color: #fff;
     font-style: italic;
+
+    & a {
+      color: #fff;
+    }
   }
 }
 
@@ -121,7 +125,13 @@
 
   & > .SocialLink {
     width: 74px;
-    padding: 10px 28px;
+    padding: 10px;
+
+    img {
+      margin: 0 auto;
+      width: 18px !important;
+      height: 18px !important;
+    }
   }
 }
 
