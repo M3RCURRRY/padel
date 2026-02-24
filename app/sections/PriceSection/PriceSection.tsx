@@ -40,10 +40,6 @@ export default function PriceSection() {
             <p className={cl.Time}>{"Первая пробная тренировка в мини группе"}</p>
             <p className={cl.Price}>1750 ₽</p>
           </div>
-          <div className={cl.PriceTime}>
-            <p className={cl.Time}>{"Первая пробная тренировка"}</p>
-            <p className={cl.Price}>1750 ₽</p>
-          </div>
           <div className={cl.PriceInfo} style={{ whiteSpace: "pre-line", minWidth: "20%" }}>
             Тренировка под руководством опытного тренера
           </div>
