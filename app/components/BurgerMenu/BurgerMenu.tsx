@@ -70,12 +70,6 @@ function BurgerDrawer({ closeHandler }: Readonly<IDrawerProps>) {
         </li>
         <span className={cl.BurgerNavDot}></span>
         <li>
-          <Link onClick={closeHandler} href={"#court_section"}>
-            Корты
-          </Link>
-        </li>
-        <span className={cl.BurgerNavDot}></span>
-        <li>
           <Link onClick={closeHandler} href={"#newbie_section"}>
             Новичкам
           </Link>
