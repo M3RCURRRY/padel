@@ -50,8 +50,8 @@ export default function AddressSection() {
           </div>
           <div className={cl.InfoBlock}>
             <p className={cl.InfoTitle}>Время работы</p>
-            <p className={cl.InfoText}>Пн-пт: 08:00-18:00</p>
-            <p className={cl.InfoText}>Сб-вс: 08:00-18:00 </p>
+            <p className={cl.InfoText}>Пн-пт: 08:00-00:00</p>
+            <p className={cl.InfoText}>Сб-вс: 08:00-00:00 </p>
           </div>
 
           <iframe

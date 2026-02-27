@@ -13,10 +13,6 @@ export default function Footer() {
             Прайс лист
           </Link>
           <div className={cl.NavDot}></div>
-          <Link href={"#court_section"} className={cl.NavLink}>
-            Корты
-          </Link>
-          <div className={cl.NavDot}></div>
           <Link href={"#newbie_section"} className={cl.NavLink}>
             Новичкам
           </Link>
@@ -53,8 +49,8 @@ export default function Footer() {
             </div>
             <div className={cl.LeftContent}>
               <div className={cl.Title}>Время работы</div>
-              <div className={cl.Desc}>Пн-пт: 08:00-18:00</div>
-              <div className={cl.Desc}>Сб-вс: 08:00-18:00</div>
+              <div className={cl.Desc}>Пн-пт: 08:00-00:00</div>
+              <div className={cl.Desc}>Сб-вс: 08:00-00:00</div>
             </div>
           </div>
           <div className={cl.BannerRight}>

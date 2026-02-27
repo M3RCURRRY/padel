@@ -23,9 +23,6 @@ export default function Header() {
               <Link href={"#price_section"}>Прайс лист</Link>
             </li>
             <li>
-              <Link href={"#court_section"}>Корты</Link>
-            </li>
-            <li>
               <Link href={"#newbie_section"}>Новичкам</Link>
             </li>
             <li>

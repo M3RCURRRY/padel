@@ -12,7 +12,7 @@ export default function NewbieSection() {
         </div>
         <div className={cl.NewbieImages}>
           <Image
-            src={"/images/collague1.png"}
+            src={"/images/newbie-2.png"}
             alt="Collague"
             height={493}
             width={955}

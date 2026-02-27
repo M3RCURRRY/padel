@@ -14,8 +14,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PADEL PRO",
-  description: "PADEL PRO - Play & Win",
+  title: "PADEL PRO CLUB",
+  description: "PADEL PRO CLUB — Современный падел-клуб во Владивостоке",
+  alternates: {
+    canonical: "https://padelvl.ru/",
+    languages: {
+      ru: "https://padelvl.ru/",
+    },
+  },
+  keywords: [
+    "падел владивосток",
+    "padel владивосток",
+    "аренда корта падел",
+    "падел клуб",
+    "тренировки падел",
+    "большой теннис владивосток",
+    "корпоративный спорт",
+    "турниры падел",
+  ],
 };
 
 export default function RootLayout({

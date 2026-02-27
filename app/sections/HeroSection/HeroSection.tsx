@@ -10,16 +10,10 @@ export default function HeroSection() {
     <section className={clsx("w-full relative", cl.HeroSection)}>
       <div className={cl.HeroImageWrapper}>
         <Image
-          loading="lazy"
-          decoding="async"
+          src={"/images/vinnete.png"}
+          alt="Background"
           fill
-          objectFit="cover"
-          style={{
-            objectFit: "cover",
-            objectPosition: `center`,
-          }}
-          alt="Hero Section"
-          src="/images/hero-bg.png"
+          className={cl.Vinnete}
         />
       </div>
       <div className={cl.HeroContent}>
